@@ -1,0 +1,103 @@
+{
+  "project": "ssm",
+  "author": "fangxin",
+  "templateDir" : "/template/ssm20190225",
+  "dbConfig": {
+    "driverClass": "com.mysql.jdbc.Driver",
+    "username": "root",
+    "password": "root",
+    "url": "jdbc:mysql:\/\/localhost:3306\/item_bank?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false"
+  },
+  "groups": [
+    {
+      "name": "product",
+      "prefix": "product"
+    },
+    {
+      "name": "business",
+      "prefix": "business"
+    },
+    {
+      "name": "search",
+      "prefix": "search"
+    },
+    {
+      "name": "special",
+      "prefix": "special"
+    },
+    {
+      "name": "store",
+      "prefix": "store"
+    },
+    {
+      "name": "orders",
+      "prefix": "order"
+    },
+    {
+      "name": "comment",
+      "prefix": "comment"
+    },
+    {
+      "name": "user",
+      "prefix": "user"
+    },
+    {
+      "name": "sys",
+      "prefix": "sys"
+    },
+    {
+      "name": "info",
+      "prefix": "info"
+    },
+    {
+      "name": "cart",
+      "prefix": "buy_cart"
+    },
+    {
+      "name": "trunk",
+      "prefix": "trunk"
+    },
+    {
+      "name": "area",
+      "prefix": "area"
+    },
+    {
+      "name": "help",
+      "prefix": "help"
+    }
+  ],
+  "mappings": [
+    {
+      "template": "controller.ftl",
+      "dir": "com/mypro/${project}/controller",
+      "rpadding": "Controller"
+    },
+    {
+      "template": "pojo.ftl",
+      "dir": "com/mypro/${project}/model"
+    },
+    {
+      "template": "service_impl.ftl",
+      "dir": "com/mypro/${project}/service/impl",
+      "rpadding": "ServiceImpl"
+    },
+    {
+      "template": "service_spi.ftl",
+      "dir": "com/mypro/${project}/service",
+      "lpadding": "",
+      "rpadding": "Service"
+    },
+    {
+      "template": "mapper.ftl",
+      "dir": "com/mypro/${project}/mapper",
+      "lpadding": "",
+      "rpadding": "Mapper"
+    },
+    {
+      "template": "mybatis_xml.ftl",
+      "dir": "com/mypro/${project}/mapper",
+      "suffix": "xml",
+      "rpadding": "Mapper"
+    }
+  ]
+}
