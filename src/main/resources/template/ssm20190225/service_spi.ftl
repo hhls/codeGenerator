@@ -78,5 +78,5 @@ public interface ${class_name}Service{
      * @author ${author}
      * @date ${sysDate?date}
      */
-    List<${class_name}> findById(Long id);
+    ${class_name} findById(Long id);
 }

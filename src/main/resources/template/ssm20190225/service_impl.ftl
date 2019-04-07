@@ -114,7 +114,7 @@ public class ${class_name}ServiceImpl implements ${class_name}Service {
      * @date ${sysDate?date}
      */
     @Override
-    public List<${class_name}> findById(Long id){
+    public ${class_name} findById(Long id){
         return ${class_name?uncap_first}Mapper.findById(id);
     }
 }
