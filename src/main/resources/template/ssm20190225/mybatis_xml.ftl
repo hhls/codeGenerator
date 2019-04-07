@@ -80,7 +80,7 @@
 		update `${table_name}` 
 		<trim prefix="set" suffixOverrides=",">
 		<#list table_column as c><#if (c_index>=1)>
-			<if test="${c.nameJ} != null and ${c.nameJ} != ''">${c.name} = ${r"#"}{${c.nameJ}},</if>
+			<if test="${c.nameJ} != null<#if c.type=="String"> and ${c.nameJ} != ''</#if>">${c.name} = ${r"#"}{${c.nameJ}},</if>
 		</#if></#list>
 		</trim>
 		<where>id = ${r"#"}{id}</where>
@@ -103,7 +103,7 @@
         <include refid="where"/>
     </select>
 
-    <select id="findById" resultMap="${class_name?uncap_first}ResultMap" parameterType="int" >
+    <select id="findById" resultMap="${class_name?uncap_first}ResultMap" parameterType="long" >
         select <include refid="table_columns" />
         from `${table_name}`
         where id = ${r"#"}{id}

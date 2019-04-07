@@ -6,7 +6,7 @@
     "driverClass": "com.mysql.jdbc.Driver",
     "username": "root",
     "password": "root",
-    "url": "jdbc:mysql:\/\/localhost:3306\/item_bank?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false"
+    "url": "jdbc:mysql:\/\/localhost:3306\/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false"
   },
   "groups": [
     {
